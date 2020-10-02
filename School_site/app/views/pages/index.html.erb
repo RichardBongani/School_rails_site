@@ -1,0 +1,142 @@
+<%= render 'partials/navbar' %>
+<div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active image1">
+        <div class="intro">
+            <h1 class="text-white"><%= @title1%></h1>
+            <h3 class="text-white">Brotherhood</h3>
+        </div>
+    </div>
+    <div class="carousel-item image2">
+        <div class="intro">
+            <h1 class="text-white"><%= @title2%></h1>
+            <h3 class="text-white">Bright Future</h3>
+        </div>
+    </div>
+    <div class="carousel-item image3">
+    </div>
+    <div class="carousel-item image4">
+
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<section class="container-fluid">
+    <div class="container-fluid welcome mt-5">
+        <h2><strong>Welcome</strong> to Hlomphanang College</h2>
+        <hr class="line mt-5">    
+    </div>
+
+    <div class="introduction mt-4">
+        <div class="container-fluid int">
+            <ul>
+                <li>GROWING UP AT THE COLLEGE</li>
+                <li>HLOMPHANAN'S WEEKLY NEWS</li>
+            </ul>
+            <div class="row">
+                    <div class="col-md-3">
+                        <%= image_tag("intro1.jpg", width: 150) %>
+                        <div class="aca mt-3">
+                            <h4>ACADEMICS</h4>
+                            <p>
+                                All students at St Alban's College have the opportunity for a positive educational experience that is tailored to meet their evolving stages of cognitive development, and expert Staff ensure high quality learning.
+                            </p>
+                            <%= link_to 'Read more>>',  services_path %>
+                        </div>
+                        
+                    </div>
+                    <div class="col-md-3">
+                        <div class="myimg">
+                        <%= image_tag("intro2.jpg",width: 150, height: 225) %>
+                        </div>
+                        <div class="aca mt-3">
+                        <h4>SPORTS</h4>
+                        <p>
+                            All students at St Alban's College have the opportunity for a positive educational experience that is tailored to meet their evolving stages of cognitive development, and expert Staff ensure high quality learning.
+                        </p>
+                        <%= link_to 'Read more>>',  services_path %>
+                    </div>
+                    </div>
+                    <div class="col-md-3">
+                        <%= image_tag("intro3.jpg", width: 150) %>
+                        <div class="aca mt-3">
+                        <h4>ARTS AND CULTURE</h4>
+                        <p>
+                            All students at St Alban's College have the opportunity for a positive educational experience that is tailored to meet their evolving stages of cognitive development, and expert Staff ensure high quality learning.
+                        </p>
+                        <%= link_to 'Read more>>',  services_path %>
+                    </div>
+                    </div>
+                    <div class="col-md-3 news ">
+                       <div class="container-fluid mt-3">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <%= image_tag("art1.JPG", width: 100) %>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6><strong>31 Jul 2020</strong></h6>
+                                    <small><%= link_to 'Final Assembly Trinity', services_path %></small>
+                                </div>
+                            </div>
+                            <div class="row mt-5">
+                            <div class="col-md-6">
+                                <%= image_tag("art2.JPG", width: 100) %>
+                            </div>
+                            <div class="col-md-6">
+                                <h6><strong>31 Jul 2020</strong></h6>
+                                <small><%= link_to 'Investec Focus', services_path %></small>
+                            </div>
+                        </div>
+                        <div class="row mt-5">
+                        <div class="col-md-6">
+                            <%= image_tag("art3.JPG", width: 100, height: 100) %>
+                        </div>
+                        <div class="col-md-6">
+                            <h6><strong>02 May 2020</strong></h6>
+                            <small><%= link_to 'POLICY DOCUMENTATION', services_path %></small>
+                        </div>
+                    </div>
+                       </div>
+                    </div>
+                    <div class="more ml-auto">
+                    <p><%= link_to 'Click for more news >>', services_path %></p>
+                    </div>
+            </div>
+        </div>
+        <%=link_to 'SA COVID-19 Website', services_path, class:'btn btn-info' %>
+    </div>
+</section>
+
+<section class="container-fluid mt-5">
+    <div class="row">
+        <div class= "col-md-4">
+            <%= image_tag("vision.png", height:450) %>
+        </div>
+        <div class= "col-md-8">
+            <%= image_tag("leadership.jpg", width: 150, height:450) %>
+        </div>
+    </div>
+
+</section>
+<hr class="mt-4">
+<footer>
+    <div class="container myfooter">
+        <div class="text-center">
+            <p><strong>Physical Address</strong> 110 Clearwater Road, Lynnwood Glen, Pretoria</p>
+            <p><strong>Postal Address</strong> Private bag X27 Sosh, Pretoria</p>
+        </div>
+        <ul>
+            <li><i class="bx bxl-facebook-square bx-md bx-border-circle"></i> </li>
+            <li><i class="bx bxl-linkedin-square bx-md bx-border-circle"></i> </li>
+            <li><i class="bx bxl-twitter bx-md bx-border-circle"></i> </li>
+            <li><i class="bx bxl-instagram bx-md bx-border-circle"></i> </li>
+        </ul>
+        </div>
+        <%=image_tag('footer-image.png') %>
+</footer>
