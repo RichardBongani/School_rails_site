@@ -218,19 +218,37 @@
 // This is the style for Signing Up page
 
 .signup_page {
-    width: 420px;
-    height: 520px;
+    width: 1020px;
+    height: 580px;
     background-color: #00468D;
     color: #fff;
     position: absolute;
-    top: 55%;
+    top: 63%;
     left: 50%;
     transform: translate(-50%, -50%);
     box-sizing: border-box;
     padding: 70px 30px;
 }
 
+.signup_container {
+    height: 100vh;
+}
+
 .my_photo {
     width: 50px;
     height: 50px;
+}
+
+// This is the section for the forgot password page
+.forgot_pwd_container {
+    width: 320px;
+    height: 380px;
+    background-color: #00468D;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
 }
