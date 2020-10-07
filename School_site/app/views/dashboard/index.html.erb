@@ -1,0 +1,235 @@
+<%= render 'partials/alerts' %>
+      <nav class="navbar navbar-dark sticky-top bg-light flex-md-nowrap p-0 shadow">
+    <%= link_to 'HLOMPHANANG COLLEGE', home_path, class:"navbar-brand col-md-3 col-lg-2 mr-0 px-3 text-dark" %>
+    <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-toggle="collapse" data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="btn-group dash_nav">
+    <i class="bx bxs-user-circle bx-md nav_user_icon dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+    <div class="dropdown-menu">
+      <li><%= link_to 'Edit Profile', edit_user_registration_url, class: 'dropdown-item' %></li>
+      <li><%= link_to "Delete Profile", cancel_user_registration_url, data: { confirm: "Are you sure?" }, method: :delete, class: 'dropdown-item' %></li>
+      <li><%= link_to 'Sign out', destroy_user_session_path, method: :delete,  class: 'dropdown-item' %></li>
+      <div class="dropdown-divider"></div>
+      <li><%= link_to 'Contact Us', edit_user_password_url, class: 'dropdown-item' %></li>
+    </div>
+  </div>
+  </nav>
+  
+  <div class="container-fluid">
+    <div class="row">
+       
+        <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block side sidebar collapse">
+            <div class="d-flex justify-content-center mt-4">
+            <i class="bx bxs-user-circle bx-lg user_ico"></i>
+              </div>
+              <p class="ml-5 text-white"><%= @student.name %></p>
+        <div class="sidebar-sticky stick pt-3">
+             
+          <ul class="nav flex-column" id="myTab">
+              
+            <li class="nav-item results-tab1 myTable2" data-target="tab_1">
+              <a class="nav-link active" data-toggle="tab1" href="#">
+                <i class="bx bxs-grid-alt"></i>
+                Dashboard <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item res results-tab1">
+              <a class="nav-link" id="results-tab" data-toggle="tab2" href="#results">
+                <i class="bx bxs-id-card "></i>
+                Results
+              </a>
+            </li>
+            <li class="nav-item results-tab1">
+              <a class="nav-link" id="report-tab" data-toggle="tab3" href="#report">
+                <i class="bx bxs-report  "></i>
+                Reports
+              </a>
+            <li class="nav-item results-tab1">
+              <a class="nav-link" id="teacher-tab" data-toggle="tab4" href="#teacher_details">
+                <i class="bx bxs-spreadsheet"></i>
+                Teacher Details
+              </a>
+            </li>
+            </li>
+            <li class="nav-item results-tab1">
+              <a class="nav-link" id="register-tab" data-toggle="tab5" href="#registration">
+                <i class="bx bxs-user"></i>
+                Registration Status
+              </a>
+            </li>
+          </ul>
+  
+          <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+            <span>Saved reports</span>
+            <a class="d-flex align-items-center text-muted" href="#" aria-label="Add a new report">
+            </a>
+          </h6>
+          <ul class="nav flex-column mb-2">
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="bx bx-file"></i>
+                Current Semester
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="bx bx-file"></i>
+                Last quarter
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="bx bx-file"></i>
+                Social engagement
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="bx bx-file"></i>
+                Upcoming Events
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+  
+      <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+          <h2 class="h2">Welcome name</h2>
+          <div class="btn-toolbar mb-2 mb-md-0">
+            <div class="btn-group mr-2">
+              <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
+              <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+            </div>
+            <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
+              <span data-feather="calendar"></span>
+              This week
+            </button>
+          </div>
+        </div>
+  
+       
+  <!-- This is for the DASHBOARD -->
+        <h2>Meet class of 2021 Grade 10a</h2>
+        <div class="table-responsive">
+          <div class="myTable tab1" id="table">
+          <table class="table table-striped table-sm">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Surname</th>
+                <th>Position</th>
+                <th>Semester Score</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1,001</td>
+                <td>Bongani</td>
+                <td>Phala</td>
+                <td>School President</td>
+                <td>98%</td>
+              </tr>
+              <tr>
+                <td>1,002</td>
+                <td>Tintswalo</td>
+                <td>Maluleke</td>
+                <td>School Treasurer</td>
+                <td>99%</td>
+              </tr>
+              <tr>
+                <td>1,003</td>
+                <td>Integer</td>
+                <td>nec</td>
+                <td>odio</td>
+                <td>Praesent</td>
+              </tr>
+              <tr>
+                <td>1,003</td>
+                <td>libero</td>
+                <td>Sed</td>
+                <td>cursus</td>
+                <td>ante</td>
+              </tr>
+              <tr>
+                <td>1,004</td>
+                <td>dapibus</td>
+                <td>diam</td>
+                <td>Sed</td>
+                <td>nisi</td>
+              </tr>
+              <tr>
+                <td>1,005</td>
+                <td>Nulla</td>
+                <td>quis</td>
+                <td>sem</td>
+                <td>at</td>
+              </tr>
+              <tr>
+                <td>1,006</td>
+                <td>nibh</td>
+                <td>elementum</td>
+                <td>imperdiet</td>
+                <td>Duis</td>
+              </tr>
+              <tr>
+                <td>1,007</td>
+                <td>sagittis</td>
+                <td>ipsum</td>
+                <td>Praesent</td>
+                <td>mauris</td>
+              </tr>
+              <tr>
+                <td>1,008</td>
+                <td>Fusce</td>
+                <td>nec</td>
+                <td>tellus</td>
+                <td>sed</td>
+              </tr>
+              <tr>
+                <td>1,009</td>
+                <td>augue</td>
+                <td>semper</td>
+                <td>porta</td>
+                <td>Mauris</td>
+              </tr>
+              <tr>
+                <td>1,010</td>
+                <td>massa</td>
+                <td>Vestibulum</td>
+                <td>lacinia</td>
+                <td>arcu</td>
+              </tr>
+              <tr>
+                <td>1,011</td>
+                <td>eget</td>
+                <td>nulla</td>
+                <td>Class</td>
+                <td>aptent</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+           <!-- This is for the Results -->
+        <div id="results" class="tab_2 myTable2">
+          <h1>Hello Results</h1>
+        </div>
+        <!-- This is for the Report -->
+        <div id="report" class="report tab_3 myTable3">
+          <h1>Hello Report</h1>
+        </div>
+        <!-- This is for the Teacher Details -->
+        <div id="teacher_details" class="teacher tab_4 myTable4">
+          <h1>Hello Teacher Details</h1>
+        </div>
+        <!-- This is for the Registration -->
+        <div id="registration" class="registration tab_5 myTable5">
+          <h1>Hello Registration</h1>
+        </div>
+        </div>
+       
+      </main>
+    </div>
+  </div>

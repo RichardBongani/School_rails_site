@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+
     def index
         @title1= 'Hlomphanang College'
         @title2= 'Ring Commitment'
@@ -12,5 +13,4 @@ class PagesController < ApplicationController
 
     def contact
     end
-
 end
