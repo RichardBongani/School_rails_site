@@ -5,8 +5,10 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="btn-group dash_nav">
-    <%= image_tag(current_user.avatar_thumbnail, :class => "rounded-circle nav_user_icon dropdown-toggle") %>
-    <i class="bx bxs-user-circle bx-md nav_user_icon dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+    
+    <i class=" nav_user_icon dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <%= image_tag(current_user.avatar_thumbnail, :class => "rounded") %>
+    </i>
     <div class="dropdown-menu">
       <li><%= link_to 'Edit Profile', edit_user_registration_url, class: 'dropdown-item' %></li>
       <li><%= link_to "Delete Profile", cancel_user_registration_url, data: { confirm: "Are you sure?" }, method: :delete, class: 'dropdown-item' %></li>
@@ -16,7 +18,7 @@
     </div>
   </div>
   </nav>
-  
+
   <div class="container-fluid">
     <div class="row">
        

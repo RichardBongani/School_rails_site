@@ -305,11 +305,11 @@ ul li a:hover {
 
 .edit_reg {
     width: 990px;
-    height: 460px;
+    height: 630px;
     background-color: #00468D;
     color: #fff;
     position: absolute;
-    top: 50%;
+    top: 65%;
     left: 50%;
     transform: translate(-50%, -50%);
     box-sizing: border-box;
@@ -332,11 +332,15 @@ ul li a:hover {
 }
 
 .nav_user_icon {
-    height: 50px;
-    width: 50px;
+    height: 35px;
+    width: 35px;
 }
 
 .user_dashboard_img {
     width: 90px;
     height: 90px;
+}
+
+.dropdown-toggle {
+    font-size: 15px;
 }
