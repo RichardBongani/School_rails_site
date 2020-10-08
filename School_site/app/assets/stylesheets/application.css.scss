@@ -323,10 +323,20 @@ ul li a:hover {
 
 // This field is for adding the Avatar
 
-.my_avatar {
+.edit_user_avatar {
     height: 130px;
-    width: 170px;
+    width: 150px;
     position: relative;
     bottom: 50px;
     left: 90px;
+}
+
+.nav_user_icon {
+    height: 50px;
+    width: 50px;
+}
+
+.user_dashboard_img {
+    width: 90px;
+    height: 90px;
 }

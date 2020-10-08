@@ -7,8 +7,13 @@
             <li><%= link_to 'Admissions', contact_path, class:'navlist' %></li>
         </ul>
         <ul class='register'>
-            <li><%= link_to 'Sign Up', new_user_registration_url, class:'navlist' %></li>
-            <li><%= link_to 'Sign In', new_user_session_url, class:'navlist' %></li>
+            <% if current_user %>
+                <li><%= link_to 'Sign Out', destroy_user_session_url, class: 'navlist', method: :delete %></li>
+                <% else %>
+                <li><%= link_to 'Sign In', new_user_session_url, class:'navlist' %></li>
+                <li><%= link_to 'Sign Up', new_user_registration_url, class:'navlist' %></li>
+            <% end %>
+            
         </ul>
     </div>
 </nav>

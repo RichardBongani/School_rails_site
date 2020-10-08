@@ -7,4 +7,13 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_one_attached :avatar
+
+  def avatar_thumbnail
+    if avatar.attached?
+      avatar.variant(resize:"150x150!").processed 
+    else
+      return "/default_profile.png"
+    end
+  end
+
 end
