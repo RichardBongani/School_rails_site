@@ -1,9 +1,11 @@
+<section class="container">
 <% if resource.errors.any? %>
-  <div id="error_explanation">
-    <ul>
+  <div class="alert alert-danger" role="alert">
+    <ul class="al">
       <% resource.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+        <p><%= message %></p>
       <% end %>
     </ul>
   </div>
 <% end %>
+</section>

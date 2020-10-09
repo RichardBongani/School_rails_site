@@ -1,4 +1,5 @@
 <%= render 'partials/loginnav' %>
+<body id="login_body">
 <section class="log_container">
 <div class="container  login_p">
 <h2 class="text-center">Log in</h2>
@@ -6,7 +7,7 @@
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
+    <%= f.email_field :email, class: "form-control" %>
   </div>
 
   <div class="field">
@@ -30,3 +31,4 @@
 </div>
 </div>
 </section>
+</body>

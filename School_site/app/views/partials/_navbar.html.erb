@@ -10,8 +10,8 @@
             <% if current_user %>
                 <li><%= link_to 'Sign Out', destroy_user_session_url, class: 'navlist', method: :delete %></li>
                 <% else %>
-                <li><%= link_to 'Sign In', new_user_session_url, class:'navlist' %></li>
-                <li><%= link_to 'Sign Up', new_user_registration_url, class:'navlist' %></li>
+                <li><%= link_to 'Sign Up', new_user_registration_url, class:'navlist btn btn-primary' %></li>
+                <li><%= link_to 'Sign In', new_user_session_url, class:'navlist btn btn-primary' %></li>
             <% end %>
             
         </ul>

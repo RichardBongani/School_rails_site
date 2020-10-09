@@ -191,9 +191,6 @@
 }
 
 // This is for styling the Login Form
-.log_container {
-    background-color: #00468D;
-}
 
 .logo_tag {
     position: relative;
@@ -203,26 +200,26 @@
 .login_p {
     width: 320px;
     height: 420px;
-    background-color: #00468D;
-    color: #fff;
+    background-color: rgba(255, 255, 255, 0.966);
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
     box-sizing: border-box;
     padding: 70px 30px;
+    border-radius: 15px;
 }
 
+#login_body {
+    background-color: #00468D;
+ }
 
 // This is the style for Signing Up page
 
 .signup_page {
     width: 1020px;
-    height: 580px;
-    background-color: #00468D;
-    color: #fff;
     position: absolute;
-    top: 63%;
+    top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
     box-sizing: border-box;
@@ -230,12 +227,20 @@
 }
 
 .signup_container {
-    height: 100vh;
+    height: 120vh;
 }
 
 .my_photo {
     width: 50px;
     height: 50px;
+}
+
+.signup_body {
+    height: 150vh;
+}
+
+.al {
+    height: 10px;
 }
 
 // This is the section for the forgot password page
